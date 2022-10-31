@@ -1,0 +1,24 @@
+output_dir: trings/SwiftGen/
+
+ib:
+  inputs: ./
+  outputs:
+    - templateName: scenes-swift4
+      output: StoryboardScenes.swift
+    - templateName: segues-swift4
+      output: StoryboardSegues.swift
+xcassets:
+  inputs: ./
+  outputs:
+    - templateName: swift4
+      output: Assets.swift
+strings:
+  inputs: ./
+  outputs:
+    templateName: structured-swift4
+    output: Strings.swift
+fonts:
+  inputs: ./
+  outputs:
+    templateName: swift4
+    output: Fonts.swift
