@@ -40,6 +40,9 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<trings.SignInViewController>(storyboard: SignIn.self)
   }
+  internal enum TreeMapView: StoryboardType {
+    internal static let storyboardName = "TreeMapView"
+  }
   internal enum WalkthroughGuide: StoryboardType {
     internal static let storyboardName = "WalkthroughGuide"
 

@@ -9,4 +9,10 @@ import UIKit
 
 class TreeCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var treeCellLabel: UILabel!
+    @IBOutlet weak var treeCellImageView: UIImageView! {
+        didSet {
+            treeCellImageView.contentMode = .scaleAspectFill
+        }
+    }
 }

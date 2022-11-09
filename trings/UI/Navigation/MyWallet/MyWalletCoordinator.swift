@@ -23,9 +23,8 @@ class MyWalletCoordinator: Coordinator {
     }
 
     func start() {
-        //showHome()
-        //showGuide()
-        showPurchase()
+        showHome()
+
     }
 }
 
