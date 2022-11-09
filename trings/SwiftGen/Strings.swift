@@ -23,6 +23,18 @@ internal enum L10n {
       internal static let error = L10n.tr("Localizable", "Alert.Title.Error", fallback: "Error")
     }
   }
+  internal enum InTheCloud {
+    /// Greenstand screens each new tree photo, verifies that it represents a living tree and tags it with additional attributes such as species. Each individual tree capture then appears on our
+    internal static let text = L10n.tr("Localizable", "InTheCloud.Text", fallback: "Greenstand screens each new tree photo, verifies that it represents a living tree and tags it with additional attributes such as species. Each individual tree capture then appears on our")
+  }
+  internal enum InYourWallet {
+    /// Tree growers own their environmental impacts, and they have the option to trade or sell their Impact Tokens on an open market platform. Investors and donors can purchase those Tokens directly from tree growers.
+    internal static let text = L10n.tr("Localizable", "InYourWallet.Text", fallback: "Tree growers own their environmental impacts, and they have the option to trade or sell their Impact Tokens on an open market platform. Investors and donors can purchase those Tokens directly from tree growers.")
+  }
+  internal enum OnTheGround {
+    /// Using our mobile Treetracker app, growers care for trees and take periodic, geotagged photos of them as they grow. These tree photo captures are uploaded to the Greenstand verification platform.
+    internal static let text = L10n.tr("Localizable", "OnTheGround.Text", fallback: "Using our mobile Treetracker app, growers care for trees and take periodic, geotagged photos of them as they grow. These tree photo captures are uploaded to the Greenstand verification platform.")
+  }
   internal enum SignIn {
     /// Sign In
     internal static let title = L10n.tr("Localizable", "SignIn.Title", fallback: "Sign In")
