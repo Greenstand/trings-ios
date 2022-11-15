@@ -17,7 +17,8 @@ class RootCoordinator: Coordinator {
     }
 
     func start() {
-        showSignIn()
+        showHome()
+        //showSignIn()
     }
 }
 

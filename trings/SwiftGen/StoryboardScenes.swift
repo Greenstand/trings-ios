@@ -23,6 +23,13 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<trings.MyWalletViewController>(storyboard: MyWallet.self)
   }
+  internal enum PreviewPurchaseView: StoryboardType {
+    internal static let storyboardName = "PreviewPurchaseView"
+
+    internal static let initialScene = InitialSceneType<trings.PreviewPurchaseViewController>(storyboard: PreviewPurchaseView.self)
+
+    internal static let previewPurchase = SceneType<trings.PreviewPurchaseViewController>(storyboard: PreviewPurchaseView.self, identifier: "PreviewPurchase")
+  }
   internal enum PurchaseTokens: StoryboardType {
     internal static let storyboardName = "PurchaseTokens"
 
@@ -32,6 +39,9 @@ internal enum StoryboardScene {
     internal static let storyboardName = "SignIn"
 
     internal static let initialScene = InitialSceneType<trings.SignInViewController>(storyboard: SignIn.self)
+  }
+  internal enum TreeMapView: StoryboardType {
+    internal static let storyboardName = "TreeMapView"
   }
   internal enum WalkthroughGuide: StoryboardType {
     internal static let storyboardName = "WalkthroughGuide"

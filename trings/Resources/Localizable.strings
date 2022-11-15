@@ -16,3 +16,8 @@
 "SignIn.OrLabel.Text" = "or";
 "SignIn.SignInButton.Title" = "Sign In";
 "SignIn.CreateWalletButton.Title" = "Create Wallet";
+
+//Walkthrough Guides
+"OnTheGround.Text" = "Using our mobile Treetracker app, growers care for trees and take periodic, geotagged photos of them as they grow. These tree photo captures are uploaded to the Greenstand verification platform.";
+"InTheCloud.Text" = "Greenstand screens each new tree photo, verifies that it represents a living tree and tags it with additional attributes such as species. Each individual tree capture then appears on our";
+"InYourWallet.Text" = "Tree growers own their environmental impacts, and they have the option to trade or sell their Impact Tokens on an open market platform. Investors and donors can purchase those Tokens directly from tree growers.";

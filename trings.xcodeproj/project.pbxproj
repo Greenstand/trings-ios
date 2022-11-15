@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F526139D1DDB8A51434A36B7 /* Pods_trings.framework */; };
-		938E0A25290ACF1E00429789 /* wallet-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 938E0A24290ACF1E00429789 /* wallet-ios-sdk */; };
 		938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */; };
 		938E0A2C290ACFC600429789 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A2B290ACFC600429789 /* MyWalletViewController.swift */; };
 		938E0A2E290ACFCF00429789 /* MyWallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938E0A2D290ACFCF00429789 /* MyWallet.storyboard */; };
@@ -44,6 +43,15 @@
 		93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6475D28D9F85F0075DF16 /* AuthenticationCoordinator.swift */; };
 		93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6476028D9FA190075DF16 /* MyWalletCoordinator.swift */; };
 		93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */; };
+		B055B2B8291407990026E50F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B7291407990026E50F /* BannerView.swift */; };
+		B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */; };
+		B0B79A592919B60100EC6267 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A582919B60100EC6267 /* Observable.swift */; };
+		B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */; };
+		B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */; };
+		B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */; };
+		B0B79A68291C0B5A00EC6267 /* TreeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A66291C0B5A00EC6267 /* TreeMapViewController.swift */; };
+		B0B79A6B291C0B9500EC6267 /* TreeMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B79A6A291C0B9500EC6267 /* TreeMapView.storyboard */; };
+		B0B79A6E291C0BAB00EC6267 /* TreeMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A6D291C0BAB00EC6267 /* TreeMapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +113,17 @@
 		93B6475D28D9F85F0075DF16 /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
 		93B6476028D9FA190075DF16 /* MyWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletCoordinator.swift; sourceTree = "<group>"; };
 		93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		B055B2AD2912B9890026E50F /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		B055B2AE2912B9A00026E50F /* Trings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Trings; path = ..; sourceTree = "<group>"; };
+		B055B2B7291407990026E50F /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B0B79A582919B60100EC6267 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewController.swift; sourceTree = "<group>"; };
+		B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewModel.swift; sourceTree = "<group>"; };
+		B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewPurchaseView.storyboard; sourceTree = "<group>"; };
+		B0B79A66291C0B5A00EC6267 /* TreeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapViewController.swift; sourceTree = "<group>"; };
+		B0B79A6A291C0B9500EC6267 /* TreeMapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TreeMapView.storyboard; sourceTree = "<group>"; };
+		B0B79A6D291C0BAB00EC6267 /* TreeMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeMapViewModel.swift; sourceTree = "<group>"; };
 		F526139D1DDB8A51434A36B7 /* Pods_trings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,7 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938E0A25290ACF1E00429789 /* wallet-ios-sdk in Frameworks */,
 				8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +165,8 @@
 		5DAB6188908F39A6F2673FAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B055B2AE2912B9A00026E50F /* Trings */,
+				B055B2AD2912B9890026E50F /* Pods */,
 				F526139D1DDB8A51434A36B7 /* Pods_trings.framework */,
 			);
 			name = Frameworks;
@@ -155,9 +175,11 @@
 		938E0A27290ACF7200429789 /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
-				938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */,
+				B0B79A65291C0B4200EC6267 /* TreeMap */,
 				938E0A2B290ACFC600429789 /* MyWalletViewController.swift */,
 				938E0A2D290ACFCF00429789 /* MyWallet.storyboard */,
+				938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */,
+				B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -165,8 +187,9 @@
 		938E0A28290ACF7F00429789 /* PurchaseTokens */ = {
 			isa = PBXGroup;
 			children = (
-				938E0A2F290ACFD700429789 /* PurchaseTokens.storyboard */,
+				B0B79A5E291AB5DC00EC6267 /* PreviewPurchaseView */,
 				938E0A31290ACFDE00429789 /* PurchaseTokensViewController.swift */,
+				938E0A2F290ACFD700429789 /* PurchaseTokens.storyboard */,
 				938E0A33290ACFE500429789 /* PurchaseTokensViewModel.swift */,
 			);
 			path = PurchaseTokens;
@@ -197,9 +220,9 @@
 		938E0A48290BB3FE00429789 /* WalkthroughGuide */ = {
 			isa = PBXGroup;
 			children = (
-				938E0A49290BC51B00429789 /* WalkthroughGuideViewModel.swift */,
 				938E0A4B290BC52800429789 /* WalkthroughGuideViewController.swift */,
 				938E0A4D290BC53700429789 /* WalkthroughGuide.storyboard */,
+				938E0A49290BC51B00429789 /* WalkthroughGuideViewModel.swift */,
 			);
 			path = WalkthroughGuide;
 			sourceTree = "<group>";
@@ -208,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				938E0A51290BFF4300429789 /* AlertPresenting.swift */,
+				B0B79A582919B60100EC6267 /* Observable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -360,6 +384,7 @@
 		93B6476228D9FBA20075DF16 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B055B2B6291407880026E50F /* Views */,
 				938E0A50290BFF3900429789 /* Protocols */,
 				938E0A41290ADAF000429789 /* Buttons */,
 				93B6476328D9FBBE0075DF16 /* ViewControllers */,
@@ -373,6 +398,34 @@
 				93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B055B2B6291407880026E50F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B055B2B7291407990026E50F /* BannerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0B79A5E291AB5DC00EC6267 /* PreviewPurchaseView */ = {
+			isa = PBXGroup;
+			children = (
+				B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */,
+				B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */,
+				B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */,
+			);
+			path = PreviewPurchaseView;
+			sourceTree = "<group>";
+		};
+		B0B79A65291C0B4200EC6267 /* TreeMap */ = {
+			isa = PBXGroup;
+			children = (
+				B0B79A66291C0B5A00EC6267 /* TreeMapViewController.swift */,
+				B0B79A6A291C0B9500EC6267 /* TreeMapView.storyboard */,
+				B0B79A6D291C0BAB00EC6267 /* TreeMapViewModel.swift */,
+			);
+			path = TreeMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +447,6 @@
 			);
 			name = trings;
 			packageProductDependencies = (
-				938E0A24290ACF1E00429789 /* wallet-ios-sdk */,
 			);
 			productName = trings;
 			productReference = 93B646F328D9F3FD0075DF16 /* trings.app */;
@@ -444,7 +496,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					93B646F228D9F3FD0075DF16 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -487,7 +539,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */,
 				938E0A4E290BC53700429789 /* WalkthroughGuide.storyboard in Resources */,
+				B0B79A6B291C0B9500EC6267 /* TreeMapView.storyboard in Resources */,
 				93B6474F28D9F6DF0075DF16 /* Localizable.strings in Resources */,
 				93B6470328D9F3FF0075DF16 /* LaunchScreen.storyboard in Resources */,
 				938E0A30290ACFD700429789 /* PurchaseTokens.storyboard in Resources */,
@@ -562,29 +616,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B055B2B8291407990026E50F /* BannerView.swift in Sources */,
 				938E0A45290ADB1200429789 /* DestructiveButton.swift in Sources */,
 				938E0A4C290BC52800429789 /* WalkthroughGuideViewController.swift in Sources */,
+				B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */,
 				938E0A3C290ADA7400429789 /* Fonts.swift in Sources */,
 				93B6475428D9F7520075DF16 /* SignInViewModel.swift in Sources */,
 				938E0A2C290ACFC600429789 /* MyWalletViewController.swift in Sources */,
 				938E0A47290ADB4700429789 /* RoundedButton.swift in Sources */,
 				93B646FB28D9F3FD0075DF16 /* SignInViewController.swift in Sources */,
+				B0B79A68291C0B5A00EC6267 /* TreeMapViewController.swift in Sources */,
 				938E0A32290ACFDE00429789 /* PurchaseTokensViewController.swift in Sources */,
 				938E0A34290ACFE500429789 /* PurchaseTokensViewModel.swift in Sources */,
 				93B6475728D9F78F0075DF16 /* Coordinator.swift in Sources */,
 				93B646F728D9F3FD0075DF16 /* AppDelegate.swift in Sources */,
 				938E0A3D290ADA7400429789 /* Assets.swift in Sources */,
+				B0B79A592919B60100EC6267 /* Observable.swift in Sources */,
 				93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */,
 				938E0A40290ADA7400429789 /* Strings.swift in Sources */,
 				93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */,
 				938E0A4A290BC51B00429789 /* WalkthroughGuideViewModel.swift in Sources */,
 				938E0A3E290ADA7400429789 /* StoryboardScenes.swift in Sources */,
 				93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */,
+				B0B79A6E291C0BAB00EC6267 /* TreeMapViewModel.swift in Sources */,
 				938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */,
 				93B6475B28D9F7D50075DF16 /* RootCoordinator.swift in Sources */,
+				B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */,
 				938E0A43290ADB0100429789 /* PrimaryButton.swift in Sources */,
 				938E0A3F290ADA7400429789 /* StoryboardSegues.swift in Sources */,
 				93B646F928D9F3FD0075DF16 /* SceneDelegate.swift in Sources */,
+				B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */,
 				938E0A52290BFF4300429789 /* AlertPresenting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -745,7 +806,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -770,7 +831,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -799,7 +860,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -940,14 +1001,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		938E0A24290ACF1E00429789 /* wallet-ios-sdk */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 938E0A23290ACF1E00429789 /* XCRemoteSwiftPackageReference "wallet-ios-sdk" */;
-			productName = "wallet-ios-sdk";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93B646EB28D9F3FD0075DF16 /* Project object */;
 }
