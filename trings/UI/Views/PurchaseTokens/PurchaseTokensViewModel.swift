@@ -11,20 +11,21 @@ protocol PurchaseTokensViewModelCoordinatorDelegate: AnyObject {
     func purchaseTokensViewModel(_ purchaseTokensViewModel: PurchaseTokensViewModel, didSelectPreviewPurchaseOf tokensNumber: Int)
 }
 protocol PurchaseTokensViewModelDelegate: AnyObject {
-    
+    func purchaseTokensViewModel(_ purchaseTokensViewModel: PurchaseTokensViewModel, didChangeTokensNumber tokens: Int, didChangeTotalCost total: Double)
 }
 class PurchaseTokensViewModel {
     weak var coordinatorDelegate: PurchaseTokensViewModelCoordinatorDelegate?
     weak var viewDelegate: PurchaseTokensViewModelDelegate?
     var title = "Purchase Tokens"
-    var numberOfTokens: Observable<Int> = Observable(0)
-    var totalCost: Observable<Double> = Observable(0)
+    var numberOfTokens: Int = 0
+    var totalCost: Double = 0
     var costPerToken: Double = 1
     func didChangeTokens(to tokens: Int) {
-        numberOfTokens.value = tokens
-        totalCost.value = Double(tokens) * costPerToken
+        numberOfTokens = tokens
+        totalCost = Double(tokens) * costPerToken
+        viewDelegate?.purchaseTokensViewModel(self, didChangeTokensNumber: numberOfTokens, didChangeTotalCost: totalCost)
     }
     func didSelectPreview() {
-        coordinatorDelegate?.purchaseTokensViewModel(self, didSelectPreviewPurchaseOf: numberOfTokens.value)
+        coordinatorDelegate?.purchaseTokensViewModel(self, didSelectPreviewPurchaseOf: numberOfTokens)
     }
 }

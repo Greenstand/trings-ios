@@ -9,16 +9,15 @@ import UIKit
 
 class WalkthroughGuideViewController: UIViewController {
 
-    @IBOutlet weak var guideScrollView: UIScrollView!
-    @IBOutlet weak var guidePageControl: UIPageControl!
-    @IBOutlet weak var doneButton: UIButton!
-
-    @IBOutlet weak var onTheGroundTextLabel: UILabel!
-    @IBOutlet weak var onTheGroundTitle: UILabel!
-    @IBOutlet weak var inTheCloudTextLabel: UILabel!
-    @IBOutlet weak var inTheCloudTitle: UILabel!
-    @IBOutlet weak var inYourWalletTextLabel: UILabel!
-    @IBOutlet weak var inYourWalletTitle: UILabel!
+    @IBOutlet private weak var guideScrollView: UIScrollView!
+    @IBOutlet private weak var guidePageControl: UIPageControl!
+    @IBOutlet private weak var doneButton: UIButton!
+    @IBOutlet private weak var onTheGroundTextLabel: UILabel!
+    @IBOutlet private weak var onTheGroundTitle: UILabel!
+    @IBOutlet private weak var inTheCloudTextLabel: UILabel!
+    @IBOutlet private weak var inTheCloudTitle: UILabel!
+    @IBOutlet private weak var inYourWalletTextLabel: UILabel!
+    @IBOutlet private weak var inYourWalletTitle: UILabel!
     var viewModel: WalkthroughGuideViewModel?
     var guideViews: [UIView]!
 

@@ -43,9 +43,8 @@
 		93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6475D28D9F85F0075DF16 /* AuthenticationCoordinator.swift */; };
 		93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6476028D9FA190075DF16 /* MyWalletCoordinator.swift */; };
 		93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */; };
-		B055B2B8291407990026E50F /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B7291407990026E50F /* BannerView.swift */; };
+		B055B2B8291407990026E50F /* WalletBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B7291407990026E50F /* WalletBannerView.swift */; };
 		B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */; };
-		B0B79A592919B60100EC6267 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A582919B60100EC6267 /* Observable.swift */; };
 		B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */; };
 		B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */; };
 		B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */; };
@@ -115,9 +114,8 @@
 		93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		B055B2AD2912B9890026E50F /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		B055B2AE2912B9A00026E50F /* Trings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Trings; path = ..; sourceTree = "<group>"; };
-		B055B2B7291407990026E50F /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		B055B2B7291407990026E50F /* WalletBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBannerView.swift; sourceTree = "<group>"; };
 		B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCollectionViewCell.swift; sourceTree = "<group>"; };
-		B0B79A582919B60100EC6267 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewController.swift; sourceTree = "<group>"; };
 		B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewModel.swift; sourceTree = "<group>"; };
 		B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewPurchaseView.storyboard; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				938E0A51290BFF4300429789 /* AlertPresenting.swift */,
-				B0B79A582919B60100EC6267 /* Observable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -403,7 +400,7 @@
 		B055B2B6291407880026E50F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B055B2B7291407990026E50F /* BannerView.swift */,
+				B055B2B7291407990026E50F /* WalletBannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -616,7 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B055B2B8291407990026E50F /* BannerView.swift in Sources */,
+				B055B2B8291407990026E50F /* WalletBannerView.swift in Sources */,
 				938E0A45290ADB1200429789 /* DestructiveButton.swift in Sources */,
 				938E0A4C290BC52800429789 /* WalkthroughGuideViewController.swift in Sources */,
 				B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */,
@@ -631,7 +628,6 @@
 				93B6475728D9F78F0075DF16 /* Coordinator.swift in Sources */,
 				93B646F728D9F3FD0075DF16 /* AppDelegate.swift in Sources */,
 				938E0A3D290ADA7400429789 /* Assets.swift in Sources */,
-				B0B79A592919B60100EC6267 /* Observable.swift in Sources */,
 				93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */,
 				938E0A40290ADA7400429789 /* Strings.swift in Sources */,
 				93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */,

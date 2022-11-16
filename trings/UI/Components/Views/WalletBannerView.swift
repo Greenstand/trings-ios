@@ -1,5 +1,5 @@
 //
-//  BannerView.swift
+//  WalletBannerView.swift
 //  trings
 //
 //  Created by Robert Huber on 11/3/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BannerView: UIView {
+class WalletBannerView: UIView {
     var bannerImageView = UIImageView()
     var profileImageView = UIImageView()
     override init(frame: CGRect) {
