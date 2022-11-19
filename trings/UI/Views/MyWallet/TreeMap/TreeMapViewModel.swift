@@ -6,3 +6,14 @@
 //
 
 import Foundation
+protocol TreeMapViewModelCoordinatorDelegate: AnyObject {
+    
+}
+protocol TreeMapViewModelDelegate: AnyObject {
+    
+}
+class TreeMapViewModel {
+    weak var coordinatorDelegate: TreeMapViewModelCoordinatorDelegate?
+    weak var viewDelegate: TreeMapViewModelDelegate?
+    var title = "Your Token Trees"
+}

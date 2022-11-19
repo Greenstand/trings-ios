@@ -17,7 +17,6 @@ protocol MyWalletViewModelViewDelegate: AnyObject {
 }
 
 class MyWalletViewModel: NSObject {
-
     weak var coordinatorDelegate: MyWalletViewModelCoordinatorDelegate?
     weak var viewDelegate: MyWalletViewModelViewDelegate?
     var title = "Wallet"
@@ -30,7 +29,6 @@ extension MyWalletViewModel: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return trees.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TreeCell", for: indexPath) as? TreeCollectionViewCell else { return UICollectionViewCell()}
         cell.treeCellImageView.image = trees[indexPath.row]

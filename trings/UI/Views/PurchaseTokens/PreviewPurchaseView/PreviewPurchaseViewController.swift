@@ -9,32 +9,36 @@ import UIKit
 
 class PreviewPurchaseViewController: UIViewController {
 
-    @IBOutlet weak var totalCostLabel: UILabel!
-    @IBOutlet weak var costPerTokenLabel: UILabel!
-    @IBOutlet weak var walletNameLabel: UILabel!
-    @IBOutlet weak var numberOfTokensLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet private weak var totalCostLabel: UILabel!
+    @IBOutlet private weak var costPerTokenLabel: UILabel!
+    @IBOutlet private weak var walletNameLabel: UILabel!
+    @IBOutlet private weak var numberOfTokensLabel: UILabel!
+    @IBOutlet private weak var stackView: UIStackView!
     var viewModel: PreviewPurchaseViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
-        viewModel?.tokens.bind({ [unowned self] tokenNumber in
-            self.numberOfTokensLabel.text = String(tokenNumber) + " Tokens"
-            let total: Double = Double(tokenNumber) * (self.viewModel?.costPerToken ?? 1)
-            self.totalCostLabel.text = String(format: "$%.02f", total)
-        })
-        costPerTokenLabel.text = "$1.00"
-        walletNameLabel.text = "My Wallet"
         let blurEffect = UIBlurEffect(style: .light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
         view.insertSubview(blurEffectView, at: 0)
+        viewModel?.presentPuchasePreview()
     }
+}
+//MARK: - Button Actions
+extension PreviewPurchaseViewController {
     @IBAction func purchaseButtonTapped(_ sender: Any) {
     }
 }
-extension PreviewPurchaseViewController: PurchaseTokensViewModelDelegate {
+extension PreviewPurchaseViewController: PreviewPurchaseViewModelDelegate {
+    func previewPurchaseViewModel(_ previewPurchaseViewModel: PreviewPurchaseViewModel, willPurchaseTokens tokens: Int, atCost cost: Double, forWallet walletName: String) {
+        numberOfTokensLabel.text = String(tokens)
+        costPerTokenLabel.text = String(format: "$%.2f", cost)
+        walletNameLabel.text = walletName
+        var total = Double(tokens) * cost
+        totalCostLabel.text = String(format: "$%.2f", total)
+    }
+    
     
 }

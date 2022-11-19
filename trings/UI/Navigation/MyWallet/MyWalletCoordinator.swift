@@ -23,8 +23,8 @@ class MyWalletCoordinator: Coordinator {
     }
 
     func start() {
-        showHome()
-
+        //showHome()
+        showPurchase()
     }
 }
 
@@ -106,7 +106,7 @@ extension MyWalletCoordinator: PreviewPurchaseViewModelCoordinatorDelegate {
                 let viewModel = PreviewPurchaseViewModel()
                 viewModel.coordinatorDelegate = self
                 viewModel.viewDelegate = viewController
-                viewModel.tokens.value = tokens
+                viewModel.tokens = tokens
                 return viewModel
             }()
             return viewController
