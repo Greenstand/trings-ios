@@ -10,6 +10,8 @@ import UIKit
 
 protocol MyWalletViewModelCoordinatorDelegate: AnyObject {
     func myWalletViewModelDidLogOut(_ myWalletViewModel: MyWalletViewModel)
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, didSelectTreeMapView trees: [Tree])
+    func myWalletViewModelDidSelectPurchaseTokens(_ myWalletViewModel: MyWalletViewModel)
 }
 
 protocol MyWalletViewModelViewDelegate: AnyObject {
@@ -24,6 +26,12 @@ class MyWalletViewModel: NSObject {
     func logout() {
         coordinatorDelegate?.myWalletViewModelDidLogOut(self)
     }
+    func showTreeMapView() {
+        coordinatorDelegate?.myWalletViewModel(self, didSelectTreeMapView: TestTrees.getTestTrees(170))
+    }
+    func showPurchaseView() {
+        coordinatorDelegate?.myWalletViewModelDidSelectPurchaseTokens(self)
+    }
 }
 extension MyWalletViewModel: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -35,6 +43,5 @@ extension MyWalletViewModel: UICollectionViewDataSource {
         cell.treeCellLabel.text = "Tree - \(indexPath.row)"
         return cell
     }
-    
 }
 

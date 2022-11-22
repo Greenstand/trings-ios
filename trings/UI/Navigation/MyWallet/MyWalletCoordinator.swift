@@ -23,8 +23,8 @@ class MyWalletCoordinator: Coordinator {
     }
 
     func start() {
-        //showHome()
-        showPurchase()
+        showHome()
+        //showPurchase()
     }
 }
 
@@ -81,6 +81,25 @@ private extension MyWalletCoordinator {
 
 // MARK: - MyWalletCoordinatorDelegate
 extension MyWalletCoordinator: MyWalletViewModelCoordinatorDelegate {
+    func myWalletViewModelDidSelectPurchaseTokens(_ myWalletViewModel: MyWalletViewModel) {
+        showPurchase()
+    }
+    
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, didSelectTreeMapView trees: [Tree]) {
+        var treeMapViewController: TreeMapViewController {
+            let viewController = StoryboardScene.TreeMapView.initialScene.instantiate()
+            viewController.viewModel = {
+                let viewModel = TreeMapViewModel()
+                viewModel.coordinatorDelegate = self
+                viewModel.viewDelegate = viewController
+                viewModel.trees = trees
+                return viewModel
+            }()
+            return viewController
+        }
+        configuration.navigationController.pushViewController(treeMapViewController, animated: true)
+    }
+    
 
     func myWalletViewModelDidLogOut(_ myWalletViewModel: MyWalletViewModel) {
         delegate?.myWalletCoordinatorDidLogout(self)
@@ -93,12 +112,6 @@ extension MyWalletCoordinator: WalkthroughGuideViewModelCoordinatorDelegate {
 }
 extension MyWalletCoordinator: PurchaseTokensViewModelCoordinatorDelegate {
     func purchaseTokensViewModel(_ purchaseTokensViewModel: PurchaseTokensViewModel, didSelectPreviewPurchaseOf tokensNumber: Int) {
-        presentPreviewPurchaseView(withTokens: tokensNumber)
-    }
-    
-}
-extension MyWalletCoordinator: PreviewPurchaseViewModelCoordinatorDelegate {
-    func presentPreviewPurchaseView(withTokens tokens: Int) {
         var previewPurchaseViewController: PreviewPurchaseViewController {
             let viewController = StoryboardScene.PreviewPurchaseView.initialScene.instantiate()
             viewController.modalPresentationStyle = .overCurrentContext
@@ -106,7 +119,7 @@ extension MyWalletCoordinator: PreviewPurchaseViewModelCoordinatorDelegate {
                 let viewModel = PreviewPurchaseViewModel()
                 viewModel.coordinatorDelegate = self
                 viewModel.viewDelegate = viewController
-                viewModel.tokens = tokens
+                viewModel.tokens = tokensNumber
                 return viewModel
             }()
             return viewController
@@ -114,4 +127,11 @@ extension MyWalletCoordinator: PreviewPurchaseViewModelCoordinatorDelegate {
         previewPurchaseViewController.modalPresentationStyle = .overCurrentContext
         configuration.navigationController.present(previewPurchaseViewController, animated: true)
     }
+    
+}
+extension MyWalletCoordinator: PreviewPurchaseViewModelCoordinatorDelegate {
+
+}
+extension MyWalletCoordinator: TreeMapViewModelCoordinatorDelegate {
+    
 }
