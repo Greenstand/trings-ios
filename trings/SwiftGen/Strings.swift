@@ -51,6 +51,10 @@ internal enum L10n {
       internal static let title = L10n.tr("Localizable", "SignIn.SignInButton.Title", fallback: "Sign In")
     }
     internal enum TextInput {
+      internal enum Password {
+        /// Password
+        internal static let placeholder = L10n.tr("Localizable", "SignIn.TextInput.Password.Placeholder", fallback: "Password")
+      }
       internal enum WalletName {
         /// Wallet Name
         internal static let placeholder = L10n.tr("Localizable", "SignIn.TextInput.WalletName.Placeholder", fallback: "Wallet Name")

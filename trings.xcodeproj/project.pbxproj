@@ -47,6 +47,7 @@
 		B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */; };
 		B07667F829253FAD00E24B0F /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07667F729253FAD00E24B0F /* TreeModel.swift */; };
 		B07667FA292691AC00E24B0F /* Callout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07667F9292691AC00E24B0F /* Callout.swift */; };
+		B07667FC292D441300E24B0F /* GreenstandWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B07667FB292D441300E24B0F /* GreenstandWalletSDK */; };
 		B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */; };
 		B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */; };
 		B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */; };
@@ -135,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */,
+				B07667FC292D441300E24B0F /* GreenstandWalletSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +460,7 @@
 			);
 			name = trings;
 			packageProductDependencies = (
+				B07667FB292D441300E24B0F /* GreenstandWalletSDK */,
 			);
 			productName = trings;
 			productReference = 93B646F328D9F3FD0075DF16 /* trings.app */;
@@ -1013,6 +1016,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B07667FB292D441300E24B0F /* GreenstandWalletSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 938E0A23290ACF1E00429789 /* XCRemoteSwiftPackageReference "wallet-ios-sdk" */;
+			productName = GreenstandWalletSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93B646EB28D9F3FD0075DF16 /* Project object */;
 }

@@ -17,8 +17,8 @@ class RootCoordinator: Coordinator {
     }
 
     func start() {
-        showHome()
-        //showSignIn()
+        //showHome()
+        showSignIn()
     }
 }
 
@@ -38,7 +38,7 @@ private extension RootCoordinator {
         startCoordinator(coordinator: authenticationCoordinator)
     }
 
-    func showHome() {
+    func showHome(walletName: String) {
         startCoordinator(coordinator: myWalletCoordinator)
     }
 }
