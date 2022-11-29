@@ -33,6 +33,7 @@ internal enum Asset {
     internal static let tree2 = ImageAsset(name: "tree2")
     internal static let tree3 = ImageAsset(name: "tree3")
     internal static let tree4 = ImageAsset(name: "tree4")
+    internal static let treeMarker = ImageAsset(name: "treeMarker")
   }
   internal enum Colors {
     internal static let grayDark = ColorAsset(name: "GrayDark")

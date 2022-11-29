@@ -257,7 +257,7 @@
                         <outlet property="bannerView" destination="y0R-Hb-SKh" id="qtK-eG-4oK"/>
                         <outlet property="profileNameLabel" destination="lD4-Pm-cw3" id="2fq-4R-CfM"/>
                         <outlet property="tokenCountLabel" destination="fiQ-Yz-qMC" id="kVH-gr-97R"/>
-                        <outlet property="tokensCountView" destination="Khf-hV-Fpe" id="AVk-8D-PTy"/>
+                        <outlet property="tokensCountView" destination="Khf-hV-Fpe" id="ovL-yz-wH8"/>
                         <outlet property="treeCollectionView" destination="0ni-xJ-ktq" id="XV1-jx-L4N"/>
                         <outlet property="treeCountLabel" destination="K7n-Ed-jiN" id="HxX-Tm-2Bc"/>
                         <outlet property="treesCountView" destination="nd5-m9-mYC" id="7Ka-mh-EtX"/>

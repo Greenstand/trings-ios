@@ -9,6 +9,12 @@ import UIKit
 
 class SignInViewController: UIViewController, AlertPresenting {
 
+    @IBOutlet weak var passwordTextField: UITextField! {
+        didSet {
+            passwordTextField.delegate = self
+            passwordTextField.placeholder = L10n.SignIn.TextInput.Password.placeholder
+        }
+    }
     @IBOutlet private var walletNameField: UITextField! {
         didSet {
             walletNameField.delegate = self
@@ -28,11 +34,14 @@ class SignInViewController: UIViewController, AlertPresenting {
         }
     }
 
-    var viewModel: SignInViewModel?
+    var viewModel: SignInViewModel? {
+        didSet {
+            title = viewModel?.title
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Greenstand Wallet"
     }
 }
 
@@ -61,9 +70,12 @@ extension SignInViewController: UITextFieldDelegate {
         guard let text = textField.text as NSString? else {
             return true
         }
-
         let newText = text.replacingCharacters(in: range, with: string)
-        viewModel?.updateWalletName(name: newText)
+        if textField == walletNameField {
+            viewModel?.updateWalletName(name: newText)
+        } else if textField == passwordTextField {
+            viewModel?.updatePassword(password: newText)
+        }
         return true
     }
 }
