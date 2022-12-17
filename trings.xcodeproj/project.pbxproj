@@ -45,6 +45,9 @@
 		93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6476428D9FBCC0075DF16 /* BaseNavigationViewController.swift */; };
 		B055B2B8291407990026E50F /* WalletBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B7291407990026E50F /* WalletBannerView.swift */; };
 		B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */; };
+		B07667F829253FAD00E24B0F /* TreeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07667F729253FAD00E24B0F /* TreeModel.swift */; };
+		B07667FA292691AC00E24B0F /* Callout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07667F9292691AC00E24B0F /* Callout.swift */; };
+		B07667FC292D441300E24B0F /* GreenstandWalletSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B07667FB292D441300E24B0F /* GreenstandWalletSDK */; };
 		B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */; };
 		B0B79A62291AB60D00EC6267 /* PreviewPurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */; };
 		B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */; };
@@ -116,6 +119,8 @@
 		B055B2AE2912B9A00026E50F /* Trings */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Trings; path = ..; sourceTree = "<group>"; };
 		B055B2B7291407990026E50F /* WalletBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBannerView.swift; sourceTree = "<group>"; };
 		B055B2B9291416440026E50F /* TreeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B07667F729253FAD00E24B0F /* TreeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModel.swift; sourceTree = "<group>"; };
+		B07667F9292691AC00E24B0F /* Callout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callout.swift; sourceTree = "<group>"; };
 		B0B79A5F291AB5FA00EC6267 /* PreviewPurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewController.swift; sourceTree = "<group>"; };
 		B0B79A61291AB60D00EC6267 /* PreviewPurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPurchaseViewModel.swift; sourceTree = "<group>"; };
 		B0B79A63291AB61B00EC6267 /* PreviewPurchaseView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviewPurchaseView.storyboard; sourceTree = "<group>"; };
@@ -131,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */,
+				B07667FC292D441300E24B0F /* GreenstandWalletSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +264,7 @@
 		93B646F528D9F3FD0075DF16 /* trings */ = {
 			isa = PBXGroup;
 			children = (
+				B07667F629253F9D00E24B0F /* TestData */,
 				938E0A36290ADA3E00429789 /* SwiftGen */,
 				93B6475028D9F7070075DF16 /* UI */,
 				93B6474B28D9F6450075DF16 /* Resources */,
@@ -405,6 +412,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		B07667F629253F9D00E24B0F /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				B07667F729253FAD00E24B0F /* TreeModel.swift */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		B0B79A5E291AB5DC00EC6267 /* PreviewPurchaseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +436,7 @@
 				B0B79A66291C0B5A00EC6267 /* TreeMapViewController.swift */,
 				B0B79A6A291C0B9500EC6267 /* TreeMapView.storyboard */,
 				B0B79A6D291C0BAB00EC6267 /* TreeMapViewModel.swift */,
+				B07667F9292691AC00E24B0F /* Callout.swift */,
 			);
 			path = TreeMap;
 			sourceTree = "<group>";
@@ -444,6 +460,7 @@
 			);
 			name = trings;
 			packageProductDependencies = (
+				B07667FB292D441300E24B0F /* GreenstandWalletSDK */,
 			);
 			productName = trings;
 			productReference = 93B646F328D9F3FD0075DF16 /* trings.app */;
@@ -634,12 +651,14 @@
 				938E0A4A290BC51B00429789 /* WalkthroughGuideViewModel.swift in Sources */,
 				938E0A3E290ADA7400429789 /* StoryboardScenes.swift in Sources */,
 				93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */,
+				B07667F829253FAD00E24B0F /* TreeModel.swift in Sources */,
 				B0B79A6E291C0BAB00EC6267 /* TreeMapViewModel.swift in Sources */,
 				938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */,
 				93B6475B28D9F7D50075DF16 /* RootCoordinator.swift in Sources */,
 				B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */,
 				938E0A43290ADB0100429789 /* PrimaryButton.swift in Sources */,
 				938E0A3F290ADA7400429789 /* StoryboardSegues.swift in Sources */,
+				B07667FA292691AC00E24B0F /* Callout.swift in Sources */,
 				93B646F928D9F3FD0075DF16 /* SceneDelegate.swift in Sources */,
 				B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */,
 				938E0A52290BFF4300429789 /* AlertPresenting.swift in Sources */,
@@ -997,6 +1016,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B07667FB292D441300E24B0F /* GreenstandWalletSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 938E0A23290ACF1E00429789 /* XCRemoteSwiftPackageReference "wallet-ios-sdk" */;
+			productName = GreenstandWalletSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93B646EB28D9F3FD0075DF16 /* Project object */;
 }

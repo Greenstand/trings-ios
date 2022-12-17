@@ -17,6 +17,9 @@ class MyWalletViewController: UIViewController, AlertPresenting {
     @IBOutlet private weak var tokenCountLabel: UILabel!
     @IBOutlet private weak var treesCountView: UIView! {
         didSet {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showTreeMapView))
+            treesCountView.addGestureRecognizer(tapGesture)
+            treesCountView.isUserInteractionEnabled = true
             treesCountView.layer.cornerRadius = 20
             treesCountView.backgroundColor = Asset.Colors.primaryGreen.color
             treesCountView.layer.opacity = 0.6
@@ -24,6 +27,9 @@ class MyWalletViewController: UIViewController, AlertPresenting {
     }
     @IBOutlet private weak var tokensCountView: UIView! {
         didSet {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(purchaseTokens))
+            tokensCountView.addGestureRecognizer(tapGesture)
+            tokensCountView.isUserInteractionEnabled = true
             tokensCountView.layer.cornerRadius = 20
             tokensCountView.backgroundColor = Asset.Colors.secondaryOrangeLight.color
             tokensCountView.layer.opacity = 0.6
@@ -55,6 +61,12 @@ class MyWalletViewController: UIViewController, AlertPresenting {
 extension MyWalletViewController {
     @IBAction private func logoutButtonPressed() {
         viewModel?.logout()
+    }
+    @objc func showTreeMapView() {
+        viewModel?.showTreeMapView()
+    }
+    @objc func purchaseTokens() {
+        viewModel?.showPurchaseView()
     }
 }
 

@@ -13,6 +13,7 @@
 //Sign In Screen
 "SignIn.Title" = "Sign In";
 "SignIn.TextInput.WalletName.Placeholder" = "Wallet Name";
+"SignIn.TextInput.Password.Placeholder" = "Password";
 "SignIn.OrLabel.Text" = "or";
 "SignIn.SignInButton.Title" = "Sign In";
 "SignIn.CreateWalletButton.Title" = "Create Wallet";
