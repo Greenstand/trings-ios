@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import GreenstandWalletSDK
 class MyWalletViewController: UIViewController, AlertPresenting {
 
     @IBOutlet private weak var treeCountLabel: UILabel!
@@ -15,6 +15,7 @@ class MyWalletViewController: UIViewController, AlertPresenting {
     @IBOutlet private weak var profileNameLabel: UILabel!
     @IBOutlet private weak var bannerView: UIView!
     @IBOutlet private weak var tokenCountLabel: UILabel!
+    private var banner: WalletBannerView!
     @IBOutlet private weak var treesCountView: UIView! {
         didSet {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showTreeMapView))
@@ -43,17 +44,15 @@ class MyWalletViewController: UIViewController, AlertPresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let banner = WalletBannerView(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 30, height: 200))
+        banner = WalletBannerView(frame: CGRect(x: 0, y: 0, width: view.bounds.width - 30, height: 200))
         bannerView.addSubview(banner)
-        banner.bannerImageView.image = UIImage(named: "banner")
-        banner.profileImageView.image = UIImage(named: "profile")
         bannerView.addConstraint(NSLayoutConstraint(item: bannerView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 225))
-        profileNameLabel.text = "dadiorchen"
-        walletCreatedLabel.text = "Wallet created on October 07, 2021"
         treeCollectionView.dataSource = viewModel
         treeCollectionView.delegate = self
         treeCountLabel.text = "170"
         tokenCountLabel.text = "170"
+        viewModel?.fetchWallet()
+        viewModel?.fetchTreeInfo()
     }
 }
 
@@ -72,6 +71,22 @@ extension MyWalletViewController {
 
 // MARK: - MyWalletViewModelViewDelegate
 extension MyWalletViewController: MyWalletViewModelViewDelegate {
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, willUpdateCreatedDate date: String) {
+        walletCreatedLabel.text = date
+    }
+
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, willUpdateProfileName profileName: String) {
+        profileNameLabel.text = profileName
+    }
+    
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, willUpdateBannerImage bannerImage: UIImage?) {
+        banner.bannerImageView.image = bannerImage
+    }
+    
+    func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, willUpdateProfileImage profileImage: UIImage?) {
+        banner.profileImageView.image = profileImage
+    }
+
     func myWalletViewModel(_ myWalletViewModel: MyWalletViewModel, didReceiveError error: Error) {
         present(alert: .error(error))
     }
