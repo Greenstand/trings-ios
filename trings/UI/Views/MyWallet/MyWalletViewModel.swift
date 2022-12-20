@@ -27,11 +27,7 @@ class MyWalletViewModel: NSObject {
     weak var coordinatorDelegate: MyWalletViewModelCoordinatorDelegate?
     weak var viewDelegate: MyWalletViewModelViewDelegate?
     var title = "Wallet"
-    var tokens: [Token] = [] {
-        didSet {
-            getTreeImages()
-        }
-    }
+    var tokens: [Token] = []
 
     func logout() {
         coordinatorDelegate?.myWalletViewModelDidLogOut(self)
