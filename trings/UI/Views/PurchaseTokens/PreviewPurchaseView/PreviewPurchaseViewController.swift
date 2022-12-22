@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PreviewPurchaseViewController: UIViewController {
+class PreviewPurchaseViewController: UIViewController, AlertPresenting {
 
     @IBOutlet private weak var totalCostLabel: UILabel!
     @IBOutlet private weak var costPerTokenLabel: UILabel!
@@ -32,6 +32,10 @@ extension PreviewPurchaseViewController {
     }
 }
 extension PreviewPurchaseViewController: PreviewPurchaseViewModelDelegate {
+    func previewPurchaseViewModel(_ previewPurchaseViewModel: PreviewPurchaseViewModel, didRecieveError error: Error) {
+        present(alert: .error(error))
+    }
+    
     func previewPurchaseViewModel(_ previewPurchaseViewModel: PreviewPurchaseViewModel, willPurchaseTokens tokens: Int, atCost cost: Double, forWallet walletName: String) {
         numberOfTokensLabel.text = String(tokens)
         costPerTokenLabel.text = String(format: "$%.2f", cost)
@@ -40,5 +44,5 @@ extension PreviewPurchaseViewController: PreviewPurchaseViewModelDelegate {
         totalCostLabel.text = String(format: "$%.2f", total)
     }
     
-    
 }
+

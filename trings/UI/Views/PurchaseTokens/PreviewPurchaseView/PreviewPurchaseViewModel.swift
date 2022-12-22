@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import GreenstandWalletSDK
+
 protocol PreviewPurchaseViewModelCoordinatorDelegate: AnyObject {
     
 }
 protocol PreviewPurchaseViewModelDelegate: AnyObject {
     func previewPurchaseViewModel(_ previewPurchaseViewModel: PreviewPurchaseViewModel, willPurchaseTokens tokens: Int, atCost cost: Double, forWallet walletName: String)
+    func previewPurchaseViewModel(_ previewPurchaseViewModel: PreviewPurchaseViewModel, didRecieveError error: Error)
     
 }
 class PreviewPurchaseViewModel {
@@ -21,5 +24,15 @@ class PreviewPurchaseViewModel {
     var wallet = "My Wallet"
     func presentPuchasePreview() {
         viewDelegate?.previewPurchaseViewModel(self, willPurchaseTokens: tokens, atCost: costPerToken, forWallet: wallet)
+    }
+    func purchaseTokens() {
+        GreenstandWalletSDK.shared.purchaseTokens(amount: tokens) { result in
+            switch result {
+            case .success(let receipt):
+                print(receipt)
+            case .failure(let error):
+                self.viewDelegate?.previewPurchaseViewModel(self, didRecieveError: error)
+            }
+        }
     }
 }
