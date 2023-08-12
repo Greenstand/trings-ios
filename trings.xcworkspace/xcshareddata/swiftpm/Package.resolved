@@ -1,12 +1,21 @@
 {
   "pins" : [
     {
+      "identity" : "appauth-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/openid/AppAuth-iOS.git",
+      "state" : {
+        "revision" : "71cde449f13d453227e687458144bde372d30fc7",
+        "version" : "1.6.2"
+      }
+    },
+    {
       "identity" : "wallet-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Greenstand/wallet-ios-sdk.git",
       "state" : {
         "branch" : "main",
-        "revision" : "3e6e2571a7849d45927dbf72264e8db7f5222562"
+        "revision" : "86507656c88ed467304de4260666793f346f4b67"
       }
     }
   ],

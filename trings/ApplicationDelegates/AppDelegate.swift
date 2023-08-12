@@ -14,6 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var rootCoordinator: Coordinator?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        GreenstandWalletSDK.shared.setup(
+            configuration: .init(
+                walletAPIConfiguration: .init(
+                    apiKey: "",
+                    rootURL: URL(string: "")!,
+                    rootWalletName: "",
+                    rootPassword: ""
+                ),
+                authenticationServiceConfiguration: .init(
+                    authorizationEndpoint: URL(string: "")!,
+                    tokenEndpoint: URL(string: "")!,
+                    clientId: "",
+                    redirectURL: URL(string: "")!,
+                    userInfoEndpoint: URL(string: "")!
+                )
+            )
+        )
+
         // Override point for customization after application launch.
         guard #available(iOS 13.0, *) else {
             let navigationController = BaseNavigationViewController()

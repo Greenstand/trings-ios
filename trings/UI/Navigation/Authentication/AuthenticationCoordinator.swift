@@ -37,9 +37,7 @@ private extension AuthenticationCoordinator {
     }
 
     func showWalkthroughGuide() {
-        configuration.navigationController.viewControllers = [
-            walkthroughViewController
-        ]
+        configuration.navigationController.present(walkthroughViewController, animated: true)
     }
 }
 
@@ -61,7 +59,7 @@ private extension AuthenticationCoordinator {
         let viewController = StoryboardScene.WalkthroughGuide.initialScene.instantiate()
         viewController.viewModel = {
             let viewModel = WalkthroughGuideViewModel()
-            viewModel.coordinatorDelegate = self
+            viewModel.viewDelegate = viewController
             return viewModel
         }()
         return viewController
@@ -76,14 +74,7 @@ extension AuthenticationCoordinator: SignInViewModelCoordinatorDelegate {
     }
 
     func signInViewModel(_ signInViewModel: SignInViewModel, didCreateWallet name: String) {
+        delegate?.authenticationCoordinator(self, didCreateWallet:  name)
         showWalkthroughGuide()
-    }
-}
-
-// MARK: - WalkthroughGuideViewModelCoordinatorDelegate
-extension AuthenticationCoordinator: WalkthroughGuideViewModelCoordinatorDelegate {
-
-    func walkthroughGuideViewModelDidCompleteWalkthrough(_ walkthroughGuideViewModel: WalkthroughGuideViewModel) {
-        delegate?.authenticationCoordinator(self, didCreateWallet: "")
     }
 }

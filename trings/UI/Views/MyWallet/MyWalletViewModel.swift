@@ -58,7 +58,9 @@ extension MyWalletViewModel: UICollectionViewDataSource {
         return tokens.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TreeCell", for: indexPath) as? TreeCollectionViewCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TreeCell", for: indexPath) as? TreeCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         cell.tokenID = tokens[indexPath.row].id
         cell.treeCellLabel.text = "Tree - \(indexPath.row)"
         return cell
@@ -113,12 +115,6 @@ extension MyWalletViewModel {
             case .failure(let error):
                 print(error)
             }
-        }
-    }
-    func getTreeImages() {
-        var treeImageURLs: [String] = []
-        for token in tokens {
-            
         }
     }
 }

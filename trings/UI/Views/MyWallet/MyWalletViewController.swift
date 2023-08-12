@@ -9,12 +9,20 @@ import UIKit
 import GreenstandWalletSDK
 class MyWalletViewController: UIViewController, AlertPresenting {
 
-    @IBOutlet private weak var treeCountLabel: UILabel!
+    @IBOutlet private weak var treeCountLabel: UILabel! {
+        didSet {
+            treeCountLabel.text = "-"
+        }
+    }
     @IBOutlet private weak var treeCollectionView: UICollectionView!
     @IBOutlet private weak var walletCreatedLabel: UILabel!
     @IBOutlet private weak var profileNameLabel: UILabel!
     @IBOutlet private weak var bannerView: UIView!
-    @IBOutlet private weak var tokenCountLabel: UILabel!
+    @IBOutlet private weak var tokenCountLabel: UILabel! {
+        didSet {
+            tokenCountLabel.text = "-"
+        }
+    }
     private var banner: WalletBannerView!
     @IBOutlet private weak var treesCountView: UIView! {
         didSet {
@@ -49,8 +57,6 @@ class MyWalletViewController: UIViewController, AlertPresenting {
         bannerView.addConstraint(NSLayoutConstraint(item: bannerView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 225))
         treeCollectionView.dataSource = viewModel
         treeCollectionView.delegate = self
-        treeCountLabel.text = "170"
-        tokenCountLabel.text = "170"
         viewModel?.fetchWallet()
         viewModel?.fetchTreeInfo()
     }
