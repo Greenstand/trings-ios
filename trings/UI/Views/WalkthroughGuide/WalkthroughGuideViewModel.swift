@@ -8,27 +8,29 @@
 import Foundation
 import UIKit
 
-protocol WalkthroughGuideViewModelCoordinatorDelegate: AnyObject {
-    func walkthroughGuideViewModelDidCompleteWalkthrough(_ walkthroughGuideViewModel: WalkthroughGuideViewModel)
-}
 protocol WalkthroughGuideViewModelDelegate: AnyObject {
-    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddText texts: [String], withTitles titles: [String])
+    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddPages pages: [WalkthroughGuideViewModel.GuidePage])
 }
 
 class WalkthroughGuideViewModel {
     weak var viewDelegate: WalkthroughGuideViewModelDelegate?
-    weak var coordinatorDelegate: WalkthroughGuideViewModelCoordinatorDelegate?
-    let guideTexts = [L10n.OnTheGround.text, L10n.InTheCloud.text, L10n.InYourWallet.text]
-    let guideTitles = ["On the Ground", "In the Cloud", "In Your Wallet"]
 
+    private let guidePages: [GuidePage] = [
+        GuidePage(title: L10n.Walkthrough.OnTheGround.title, info: L10n.Walkthrough.OnTheGround.info, icon: Asset.Assets.circleLeaf.image),
+        GuidePage(title: L10n.Walkthrough.InTheCloud.title, info: L10n.Walkthrough.InTheCloud.info, icon: Asset.Assets.circleBulb.image),
+        GuidePage(title: L10n.Walkthrough.InYourWallet.title, info: L10n.Walkthrough.InYourWallet.info, icon: Asset.Assets.circleCoin.image)
+    ]
 
-    func walkthroughComplete() {
-        coordinatorDelegate?.walkthroughGuideViewModelDidCompleteWalkthrough(self)
-    }
     func setupGuideLabels() {
-        viewDelegate?.walkthroughGuideViewController(self, willAddText: guideTexts, withTitles: guideTitles)
+        viewDelegate?.walkthroughGuideViewController(self, willAddPages: guidePages)
     }
 }
+
 extension WalkthroughGuideViewModel {
-    
+
+    struct GuidePage {
+        let title: String
+        let info: String
+        let icon: UIImage
+    }
 }

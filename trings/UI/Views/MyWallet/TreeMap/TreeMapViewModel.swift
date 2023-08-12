@@ -18,7 +18,7 @@ class TreeMapViewModel {
     weak var coordinatorDelegate: TreeMapViewModelCoordinatorDelegate?
     weak var viewDelegate: TreeMapViewModelDelegate?
     var trees: [Tree] = []
-    var title = "Your Token Trees"
+    var title = "Your Trees"
     func displayTreeAnnotations() {
         viewDelegate?.treeMapViewModel(self, willDisplayTrees: trees.map { Annotation(tree: $0) })
     }

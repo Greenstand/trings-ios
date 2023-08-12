@@ -36,9 +36,11 @@ private extension MyWalletCoordinator {
             homeViewController
         ]
     }
+
     func showGuide() {
-        configuration.navigationController.viewControllers = [walkthroughGuideViewController]
+        configuration.navigationController.present(walkthroughGuideViewController, animated: true)
     }
+
     func showPurchase() {
         configuration.navigationController.pushViewController(purchaseTokensViewController, animated: true)
     }
@@ -61,7 +63,6 @@ private extension MyWalletCoordinator {
         let viewController = StoryboardScene.WalkthroughGuide.initialScene.instantiate()
         viewController.viewModel = {
             let viewModel = WalkthroughGuideViewModel()
-            viewModel.coordinatorDelegate = self
             viewModel.viewDelegate = viewController
             return viewModel
         }()
@@ -105,11 +106,7 @@ extension MyWalletCoordinator: MyWalletViewModelCoordinatorDelegate {
         delegate?.myWalletCoordinatorDidLogout(self)
     }
 }
-extension MyWalletCoordinator: WalkthroughGuideViewModelCoordinatorDelegate {
-    func walkthroughGuideViewModelDidCompleteWalkthrough(_ walkthroughGuideViewModel: WalkthroughGuideViewModel) {
-        showHome()
-    }
-}
+
 extension MyWalletCoordinator: PurchaseTokensViewModelCoordinatorDelegate {
     func purchaseTokensViewModel(_ purchaseTokensViewModel: PurchaseTokensViewModel, didSelectPreviewPurchaseOf tokensNumber: Int) {
         var previewPurchaseViewController: PreviewPurchaseViewController {
