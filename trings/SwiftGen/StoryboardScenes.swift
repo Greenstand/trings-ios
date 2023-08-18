@@ -16,7 +16,7 @@ internal enum StoryboardScene {
   internal enum FirstWalkthroughPage: StoryboardType {
     internal static let storyboardName = "FirstWalkthroughPage"
 
-    internal static let initialScene = InitialSceneType<FirstWalkthroughPageViewController>(storyboard: FirstWalkthroughPage.self)
+    internal static let initialScene = InitialSceneType<trings.FirstWalkthroughPageViewController>(storyboard: FirstWalkthroughPage.self)
   }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
@@ -43,7 +43,7 @@ internal enum StoryboardScene {
   internal enum SecondWalkthroughPage: StoryboardType {
     internal static let storyboardName = "SecondWalkthroughPage"
 
-    internal static let initialScene = InitialSceneType<SecondWalkthroughPageViewController>(storyboard: SecondWalkthroughPage.self)
+    internal static let initialScene = InitialSceneType<trings.SecondWalkthroughPageViewController>(storyboard: SecondWalkthroughPage.self)
   }
   internal enum SignIn: StoryboardType {
     internal static let storyboardName = "SignIn"
@@ -53,7 +53,7 @@ internal enum StoryboardScene {
   internal enum ThirdWalkthroughPage: StoryboardType {
     internal static let storyboardName = "ThirdWalkthroughPage"
 
-    internal static let initialScene = InitialSceneType<ThirdWalkthroughPageViewController>(storyboard: ThirdWalkthroughPage.self)
+    internal static let initialScene = InitialSceneType<trings.ThirdWalkthroughPageViewController>(storyboard: ThirdWalkthroughPage.self)
   }
   internal enum TreeMapView: StoryboardType {
     internal static let storyboardName = "TreeMapView"
