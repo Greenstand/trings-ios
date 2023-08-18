@@ -11,6 +11,9 @@
 		372773B72A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */; };
 		372773B92A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */; };
 		372773BB2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */; };
+		372773C02A8FB9FB0079EF35 /* FirstWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773BF2A8FB9FB0079EF35 /* FirstWalkthroughPageViewController.swift */; };
+		372773C22A8FBA1D0079EF35 /* SecondWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773C12A8FBA1D0079EF35 /* SecondWalkthroughPageViewController.swift */; };
+		372773C42A8FBA5C0079EF35 /* ThirdWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773C32A8FBA5C0079EF35 /* ThirdWalkthroughPageViewController.swift */; };
 		8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F526139D1DDB8A51434A36B7 /* Pods_trings.framework */; };
 		938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */; };
 		938E0A2C290ACFC600429789 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A2B290ACFC600429789 /* MyWalletViewController.swift */; };
@@ -83,6 +86,9 @@
 		372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstWalkthroughPage.storyboard; sourceTree = "<group>"; };
 		372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondWalkthroughPage.storyboard; sourceTree = "<group>"; };
 		372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdWalkthroughPage.storyboard; sourceTree = "<group>"; };
+		372773BF2A8FB9FB0079EF35 /* FirstWalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		372773C12A8FBA1D0079EF35 /* SecondWalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		372773C32A8FBA5C0079EF35 /* ThirdWalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdWalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		8F7E623D148AA014682D1196 /* Pods-trings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.debug.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.debug.xcconfig"; sourceTree = "<group>"; };
 		938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewModel.swift; sourceTree = "<group>"; };
 		938E0A2B290ACFC600429789 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */,
+				372773BF2A8FB9FB0079EF35 /* FirstWalkthroughPageViewController.swift */,
 			);
 			path = First;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */,
+				372773C12A8FBA1D0079EF35 /* SecondWalkthroughPageViewController.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */,
+				372773C32A8FBA5C0079EF35 /* ThirdWalkthroughPageViewController.swift */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -700,8 +709,10 @@
 				938E0A3E290ADA7400429789 /* StoryboardScenes.swift in Sources */,
 				93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */,
 				B07667F829253FAD00E24B0F /* TreeModel.swift in Sources */,
+				372773C22A8FBA1D0079EF35 /* SecondWalkthroughPageViewController.swift in Sources */,
 				B0B79A6E291C0BAB00EC6267 /* TreeMapViewModel.swift in Sources */,
 				938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */,
+				372773C02A8FB9FB0079EF35 /* FirstWalkthroughPageViewController.swift in Sources */,
 				93B6475B28D9F7D50075DF16 /* RootCoordinator.swift in Sources */,
 				B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */,
 				938E0A43290ADB0100429789 /* PrimaryButton.swift in Sources */,
@@ -709,6 +720,7 @@
 				B07667FA292691AC00E24B0F /* Callout.swift in Sources */,
 				93B646F928D9F3FD0075DF16 /* SceneDelegate.swift in Sources */,
 				B055B2BA291416440026E50F /* TreeCollectionViewCell.swift in Sources */,
+				372773C42A8FBA5C0079EF35 /* ThirdWalkthroughPageViewController.swift in Sources */,
 				938E0A52290BFF4300429789 /* AlertPresenting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

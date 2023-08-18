@@ -13,6 +13,11 @@ import UIKit
 // swiftlint:disable explicit_type_interface identifier_name line_length prefer_self_in_static_references
 // swiftlint:disable type_body_length type_name
 internal enum StoryboardScene {
+  internal enum FirstWalkthroughPage: StoryboardType {
+    internal static let storyboardName = "FirstWalkthroughPage"
+
+    internal static let initialScene = InitialSceneType<FirstWalkthroughPageViewController>(storyboard: FirstWalkthroughPage.self)
+  }
   internal enum LaunchScreen: StoryboardType {
     internal static let storyboardName = "LaunchScreen"
 
@@ -35,10 +40,20 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<trings.PurchaseTokensViewController>(storyboard: PurchaseTokens.self)
   }
+  internal enum SecondWalkthroughPage: StoryboardType {
+    internal static let storyboardName = "SecondWalkthroughPage"
+
+    internal static let initialScene = InitialSceneType<SecondWalkthroughPageViewController>(storyboard: SecondWalkthroughPage.self)
+  }
   internal enum SignIn: StoryboardType {
     internal static let storyboardName = "SignIn"
 
     internal static let initialScene = InitialSceneType<trings.SignInViewController>(storyboard: SignIn.self)
+  }
+  internal enum ThirdWalkthroughPage: StoryboardType {
+    internal static let storyboardName = "ThirdWalkthroughPage"
+
+    internal static let initialScene = InitialSceneType<ThirdWalkthroughPageViewController>(storyboard: ThirdWalkthroughPage.self)
   }
   internal enum TreeMapView: StoryboardType {
     internal static let storyboardName = "TreeMapView"
