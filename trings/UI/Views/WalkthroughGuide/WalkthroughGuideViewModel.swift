@@ -9,28 +9,34 @@ import Foundation
 import UIKit
 
 protocol WalkthroughGuideViewModelDelegate: AnyObject {
-    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddPages pages: [WalkthroughGuideViewModel.GuidePage])
+    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddFirstPage page: UIViewController)
 }
 
 class WalkthroughGuideViewModel {
     weak var viewDelegate: WalkthroughGuideViewModelDelegate?
-
-    private let guidePages: [GuidePage] = [
-        GuidePage(title: L10n.Walkthrough.OnTheGround.title, info: L10n.Walkthrough.OnTheGround.info, icon: Asset.Assets.circleLeaf.image),
-        GuidePage(title: L10n.Walkthrough.InTheCloud.title, info: L10n.Walkthrough.InTheCloud.info, icon: Asset.Assets.circleBulb.image),
-        GuidePage(title: L10n.Walkthrough.InYourWallet.title, info: L10n.Walkthrough.InYourWallet.info, icon: Asset.Assets.circleCoin.image)
+    
+    private let guidePages = [
+        StoryboardScene.FirstWalkthroughPage.initialScene.instantiate(),
+        StoryboardScene.SecondWalkthroughPage.initialScene.instantiate(),
+        StoryboardScene.ThirdWalkthroughPage.initialScene.instantiate()
     ]
-
-    func setupGuideLabels() {
-        viewDelegate?.walkthroughGuideViewController(self, willAddPages: guidePages)
+    
+    func setupFirstPage() {
+        guard let firstPage = guidePages.first else { return }
+        viewDelegate?.walkthroughGuideViewController(self, willAddFirstPage: firstPage)
     }
-}
-
-extension WalkthroughGuideViewModel {
-
-    struct GuidePage {
-        let title: String
-        let info: String
-        let icon: UIImage
+    
+    func getPage(before viewController: UIViewController) -> UIViewController? {
+        guard let index = guidePages.firstIndex(of: viewController) else { return nil }
+        let previousPage = index - 1
+        guard previousPage >= 0 else { return nil }
+        return guidePages[previousPage]
+    }
+    
+    func getPage(after viewController: UIViewController) -> UIViewController? {
+        guard let index = guidePages.firstIndex(of: viewController) else { return nil }
+        let nextPage = index + 1
+        guard nextPage < guidePages.count else { return nil }
+        return guidePages[nextPage]
     }
 }

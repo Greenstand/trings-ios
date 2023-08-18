@@ -19,9 +19,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-yC-Pfb">
                                 <rect key="frame" x="0.0" y="47" width="390" height="673"/>
-                                <connections>
-                                    <segue destination="Tcr-eb-k3O" kind="embed" id="Lbd-mS-rtl"/>
-                                </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-fA-M9r" customClass="PrimaryButton" customModule="trings" customModuleProvider="target">
                                 <rect key="frame" x="20" y="740" width="350" height="50"/>
@@ -50,19 +47,12 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="doneButton" destination="ZTW-fA-M9r" id="NpA-e1-WCT"/>
+                        <outlet property="pageContainerView" destination="qMC-yC-Pfb" id="ATv-on-P9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="629" y="9"/>
-        </scene>
-        <!--Walkthrough Page View Controller-->
-        <scene sceneID="Roy-CC-n4e">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Tcr-eb-k3O" customClass="WalkthroughPageViewController" customModule="trings" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hDu-eE-T25" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1480" y="9"/>
         </scene>
     </scenes>
     <resources>

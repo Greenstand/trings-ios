@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		372773B52A8FB19A0079EF35 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */; };
 		372773B72A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */; };
 		372773B92A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */; };
 		372773BB2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */; };
@@ -82,7 +81,6 @@
 
 /* Begin PBXFileReference section */
 		1E944E60A35B2C6911EDFC3E /* Pods-trings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.release.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.release.xcconfig"; sourceTree = "<group>"; };
-		372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstWalkthroughPage.storyboard; sourceTree = "<group>"; };
 		372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondWalkthroughPage.storyboard; sourceTree = "<group>"; };
 		372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdWalkthroughPage.storyboard; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				372773BC2A8FB5DD0079EF35 /* First */,
 				372773BD2A8FB5E80079EF35 /* Second */,
 				372773BE2A8FB5F60079EF35 /* Third */,
-				372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -701,7 +698,6 @@
 				93B6475728D9F78F0075DF16 /* Coordinator.swift in Sources */,
 				93B646F728D9F3FD0075DF16 /* AppDelegate.swift in Sources */,
 				938E0A3D290ADA7400429789 /* Assets.swift in Sources */,
-				372773B52A8FB19A0079EF35 /* WalkthroughPageViewController.swift in Sources */,
 				93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */,
 				938E0A40290ADA7400429789 /* Strings.swift in Sources */,
 				93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */,

@@ -15,11 +15,34 @@ class WalkthroughGuideViewController: UIViewController {
         }
     }
 
+    @IBOutlet private weak var pageContainerView: UIView!
+    
+    private var pageViewController: UIPageViewController = {
+        let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        return pageViewController
+    }()
+    
     var viewModel: WalkthroughGuideViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.setupGuideLabels()
+        setupPageViewController()
+        viewModel?.setupFirstPage()
+    }
+    
+    func setupPageViewController() {
+        pageViewController.dataSource = self
+        self.addChild(pageViewController)
+        pageContainerView.addSubview(pageViewController.view)
+        pageViewController.didMove(toParent: self)
+        
+        NSLayoutConstraint.activate([
+            pageViewController.view.leadingAnchor.constraint(equalTo: pageContainerView.leadingAnchor),
+            pageViewController.view.topAnchor.constraint(equalTo: pageContainerView.topAnchor),
+            pageViewController.view.trailingAnchor.constraint(equalTo: pageContainerView.trailingAnchor),
+            pageViewController.view.bottomAnchor.constraint(equalTo: pageContainerView.bottomAnchor)
+        ])
     }
 }
 
@@ -34,11 +57,19 @@ extension WalkthroughGuideViewController {
 // MARK: - WalkthroughGuideViewModelDelegate
 extension WalkthroughGuideViewController: WalkthroughGuideViewModelDelegate {
 
-    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddPages pages: [WalkthroughGuideViewModel.GuidePage]) {
-
+    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddFirstPage page: UIViewController) {
+        pageViewController.setViewControllers([page], direction: .forward, animated: true)
     }
+}
 
-    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddText texts: [String], withTitles titles: [String]) {
-        
+// MARK: - UIPageViewControllerDataSource
+extension WalkthroughGuideViewController: UIPageViewControllerDataSource {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        return viewModel?.getPage(before: viewController)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        return viewModel?.getPage(after: viewController)
     }
 }
