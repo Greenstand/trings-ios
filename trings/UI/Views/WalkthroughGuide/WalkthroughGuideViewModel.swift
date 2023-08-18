@@ -39,4 +39,12 @@ class WalkthroughGuideViewModel {
         guard nextPage < guidePages.count else { return nil }
         return guidePages[nextPage]
     }
+    
+    func getIndex(of viewController: UIViewController) -> Int? {
+        return guidePages.firstIndex(of: viewController)
+    }
+    
+    func getTotalNumberOfPages() -> Int {
+        guidePages.count
+    }
 }

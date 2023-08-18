@@ -17,7 +17,6 @@ class WalkthroughGuideViewController: UIViewController {
     
     @IBOutlet private weak var guidePageControl: UIPageControl! {
         didSet {
-            guidePageControl.numberOfPages = 0
             guidePageControl.currentPageIndicatorTintColor = Asset.Colors.primaryGreen.color
             guidePageControl.pageIndicatorTintColor = Asset.Colors.grayLight.color
         }
@@ -32,15 +31,23 @@ class WalkthroughGuideViewController: UIViewController {
     }()
     
     var viewModel: WalkthroughGuideViewModel?
+    
+    private var pendingIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    func setupView() {
         setupPageViewController()
         viewModel?.setupFirstPage()
+        guidePageControl.numberOfPages = viewModel?.getTotalNumberOfPages() ?? 0
     }
     
     func setupPageViewController() {
         pageViewController.dataSource = self
+        pageViewController.delegate = self
         self.addChild(pageViewController)
         pageContainerView.addSubview(pageViewController.view)
         pageViewController.didMove(toParent: self)
@@ -79,5 +86,21 @@ extension WalkthroughGuideViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         return viewModel?.getPage(after: viewController)
+    }
+}
+
+// MARK: - UIPageViewControllerDelegate
+extension WalkthroughGuideViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        guard let firstVC = pendingViewControllers.first,
+              let index = viewModel?.getIndex(of: firstVC)
+        else { return }
+        pendingIndex = index
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            guidePageControl.currentPage = pendingIndex
+        }
     }
 }
