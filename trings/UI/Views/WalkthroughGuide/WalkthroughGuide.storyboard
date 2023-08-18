@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-yC-Pfb">
-                                <rect key="frame" x="0.0" y="47" width="390" height="633"/>
+                                <rect key="frame" x="20" y="67" width="350" height="613"/>
                             </containerView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-th-c3x">
                                 <rect key="frame" x="20" y="690" width="350" height="30"/>
@@ -43,11 +43,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qMC-yC-Pfb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5DM-eu-Xg5"/>
+                            <constraint firstItem="qMC-yC-Pfb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="5DM-eu-Xg5"/>
                             <constraint firstItem="zWt-th-c3x" firstAttribute="top" secondItem="qMC-yC-Pfb" secondAttribute="bottom" constant="10" id="HHw-7x-JWg"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qMC-yC-Pfb" secondAttribute="trailing" id="KYO-CF-K1y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qMC-yC-Pfb" secondAttribute="trailing" constant="20" id="KYO-CF-K1y"/>
                             <constraint firstItem="ZTW-fA-M9r" firstAttribute="top" secondItem="zWt-th-c3x" secondAttribute="bottom" constant="20" id="XJh-sP-wD7"/>
-                            <constraint firstItem="qMC-yC-Pfb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jj5-3h-oFJ"/>
+                            <constraint firstItem="qMC-yC-Pfb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="jj5-3h-oFJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZTW-fA-M9r" secondAttribute="bottom" constant="20" id="r32-mR-loD"/>
                             <constraint firstItem="zWt-th-c3x" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="tN6-zX-9fk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zWt-th-c3x" secondAttribute="trailing" constant="20" id="w1m-jg-e9C"/>
