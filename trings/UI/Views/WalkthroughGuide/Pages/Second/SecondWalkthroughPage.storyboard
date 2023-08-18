@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Second Walkthrough Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -16,9 +21,48 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rHY-xD-xMz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYc-AK-jvY">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="KF8-q9-JYi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-i8-my0">
+                                        <rect key="frame" x="0.0" y="180" width="393" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eB9-Wi-LtM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-uO-wiX">
+                                        <rect key="frame" x="0.0" y="240" width="393" height="519"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rHY-xD-xMz" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LEX-J2-tWe"/>
+                            <constraint firstItem="rHY-xD-xMz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cFT-hF-NLf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rHY-xD-xMz" secondAttribute="bottom" id="dej-gg-Cpl"/>
+                            <constraint firstItem="rHY-xD-xMz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yhz-wI-0zQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="vYc-AK-jvY" id="UoO-qg-l1L"/>
+                        <outlet property="textLabel" destination="Zr6-uO-wiX" id="dRr-2R-czy"/>
+                        <outlet property="titleLabel" destination="Je3-i8-my0" id="Lp7-U3-AT1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
