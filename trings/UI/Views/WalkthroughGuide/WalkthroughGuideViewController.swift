@@ -14,7 +14,15 @@ class WalkthroughGuideViewController: UIViewController {
             doneButton.setTitle(L10n.Walkthrough.ContinueButton.title, for: .normal)
         }
     }
-
+    
+    @IBOutlet private weak var guidePageControl: UIPageControl! {
+        didSet {
+            guidePageControl.numberOfPages = 0
+            guidePageControl.currentPageIndicatorTintColor = Asset.Colors.primaryGreen.color
+            guidePageControl.pageIndicatorTintColor = Asset.Colors.grayLight.color
+        }
+    }
+    
     @IBOutlet private weak var pageContainerView: UIView!
     
     private var pageViewController: UIPageViewController = {

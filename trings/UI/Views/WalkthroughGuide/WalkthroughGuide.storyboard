@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,8 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-yC-Pfb">
-                                <rect key="frame" x="0.0" y="47" width="390" height="673"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="633"/>
                             </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zWt-th-c3x">
+                                <rect key="frame" x="20" y="690" width="350" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DRb-QN-Mby"/>
+                                </constraints>
+                                <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-fA-M9r" customClass="PrimaryButton" customModule="trings" customModuleProvider="target">
                                 <rect key="frame" x="20" y="740" width="350" height="50"/>
                                 <constraints>
@@ -36,10 +44,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qMC-yC-Pfb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5DM-eu-Xg5"/>
+                            <constraint firstItem="zWt-th-c3x" firstAttribute="top" secondItem="qMC-yC-Pfb" secondAttribute="bottom" constant="10" id="HHw-7x-JWg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qMC-yC-Pfb" secondAttribute="trailing" id="KYO-CF-K1y"/>
+                            <constraint firstItem="ZTW-fA-M9r" firstAttribute="top" secondItem="zWt-th-c3x" secondAttribute="bottom" constant="20" id="XJh-sP-wD7"/>
                             <constraint firstItem="qMC-yC-Pfb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jj5-3h-oFJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZTW-fA-M9r" secondAttribute="bottom" constant="20" id="r32-mR-loD"/>
-                            <constraint firstItem="ZTW-fA-M9r" firstAttribute="top" secondItem="qMC-yC-Pfb" secondAttribute="bottom" constant="20" id="ua1-Jm-zzs"/>
+                            <constraint firstItem="zWt-th-c3x" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="tN6-zX-9fk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zWt-th-c3x" secondAttribute="trailing" constant="20" id="w1m-jg-e9C"/>
                             <constraint firstItem="ZTW-fA-M9r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="zXo-Ji-xRs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZTW-fA-M9r" secondAttribute="trailing" constant="20" id="zxu-oC-IV5"/>
                         </constraints>
@@ -47,15 +58,19 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="doneButton" destination="ZTW-fA-M9r" id="NpA-e1-WCT"/>
+                        <outlet property="guidePageControl" destination="zWt-th-c3x" id="NVQ-pi-i2p"/>
                         <outlet property="pageContainerView" destination="qMC-yC-Pfb" id="ATv-on-P9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="9"/>
+            <point key="canvasLocation" x="627.69230769230762" y="8.5308056872037916"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
