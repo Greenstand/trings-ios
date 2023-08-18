@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372773B52A8FB19A0079EF35 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */; };
+		372773B72A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */; };
+		372773B92A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */; };
+		372773BB2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */; };
 		8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F526139D1DDB8A51434A36B7 /* Pods_trings.framework */; };
 		938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */; };
 		938E0A2C290ACFC600429789 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A2B290ACFC600429789 /* MyWalletViewController.swift */; };
@@ -75,6 +79,10 @@
 
 /* Begin PBXFileReference section */
 		1E944E60A35B2C6911EDFC3E /* Pods-trings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.release.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.release.xcconfig"; sourceTree = "<group>"; };
+		372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstWalkthroughPage.storyboard; sourceTree = "<group>"; };
+		372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondWalkthroughPage.storyboard; sourceTree = "<group>"; };
+		372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdWalkthroughPage.storyboard; sourceTree = "<group>"; };
 		8F7E623D148AA014682D1196 /* Pods-trings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.debug.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.debug.xcconfig"; sourceTree = "<group>"; };
 		938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewModel.swift; sourceTree = "<group>"; };
 		938E0A2B290ACFC600429789 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +165,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372773B32A8FB1720079EF35 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				372773BC2A8FB5DD0079EF35 /* First */,
+				372773BD2A8FB5E80079EF35 /* Second */,
+				372773BE2A8FB5F60079EF35 /* Third */,
+				372773B42A8FB19A0079EF35 /* WalkthroughPageViewController.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		372773BC2A8FB5DD0079EF35 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				372773B62A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		372773BD2A8FB5E80079EF35 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				372773B82A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		372773BE2A8FB5F60079EF35 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				372773BA2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
 		3A0B32D7B27CC8FC024F3C64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +267,7 @@
 		938E0A48290BB3FE00429789 /* WalkthroughGuide */ = {
 			isa = PBXGroup;
 			children = (
+				372773B32A8FB1720079EF35 /* Pages */,
 				938E0A4B290BC52800429789 /* WalkthroughGuideViewController.swift */,
 				938E0A4D290BC53700429789 /* WalkthroughGuide.storyboard */,
 				938E0A49290BC51B00429789 /* WalkthroughGuideViewModel.swift */,
@@ -553,6 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372773B92A8FB2E00079EF35 /* SecondWalkthroughPage.storyboard in Resources */,
 				B0B79A64291AB61B00EC6267 /* PreviewPurchaseView.storyboard in Resources */,
 				938E0A4E290BC53700429789 /* WalkthroughGuide.storyboard in Resources */,
 				B0B79A6B291C0B9500EC6267 /* TreeMapView.storyboard in Resources */,
@@ -561,6 +606,8 @@
 				938E0A30290ACFD700429789 /* PurchaseTokens.storyboard in Resources */,
 				93B6474D28D9F6810075DF16 /* Colors.xcassets in Resources */,
 				938E0A2E290ACFCF00429789 /* MyWallet.storyboard in Resources */,
+				372773B72A8FB2CE0079EF35 /* FirstWalkthroughPage.storyboard in Resources */,
+				372773BB2A8FB30D0079EF35 /* ThirdWalkthroughPage.storyboard in Resources */,
 				93B6470028D9F3FF0075DF16 /* Assets.xcassets in Resources */,
 				93B646FE28D9F3FD0075DF16 /* SignIn.storyboard in Resources */,
 			);
@@ -645,6 +692,7 @@
 				93B6475728D9F78F0075DF16 /* Coordinator.swift in Sources */,
 				93B646F728D9F3FD0075DF16 /* AppDelegate.swift in Sources */,
 				938E0A3D290ADA7400429789 /* Assets.swift in Sources */,
+				372773B52A8FB19A0079EF35 /* WalkthroughPageViewController.swift in Sources */,
 				93B6475E28D9F85F0075DF16 /* AuthenticationCoordinator.swift in Sources */,
 				938E0A40290ADA7400429789 /* Strings.swift in Sources */,
 				93B6476128D9FA190075DF16 /* MyWalletCoordinator.swift in Sources */,
