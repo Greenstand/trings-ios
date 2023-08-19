@@ -41,7 +41,7 @@ class WalkthroughGuideViewController: UIViewController {
     
     func setupView() {
         setupPageViewController()
-        viewModel?.setupFirstPage()
+        viewModel?.setupGuidePages()
         guidePageControl.numberOfPages = viewModel?.getTotalNumberOfPages() ?? 0
     }
     
