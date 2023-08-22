@@ -7,7 +7,11 @@
 
 import UIKit
 
-class WalkthroughPageViewController: UIViewController {
+protocol WalkthroughPage: UIViewController {
+    func configureView(with guidePage: WalkthroughGuideViewModel.GuidePage)
+}
+
+class WalkthroughPageViewController: UIViewController, WalkthroughPage {
 
     @IBOutlet private weak var imageView: UIImageView!
     
@@ -23,18 +27,18 @@ class WalkthroughPageViewController: UIViewController {
         }
     }
     
-    private var guidePageConfig: WalkthroughGuideViewModel.GuidePageConfig?
+    private var guidePage: WalkthroughGuideViewModel.GuidePage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let guidePageConfig = self.guidePageConfig else { return }
+        // Configure on viewDidLoad because UIPageViewController only loads the view when showing to the user. 
+        guard let guidePageConfig = self.guidePage else { return }
         imageView.image = guidePageConfig.icon
         titleLabel.text = guidePageConfig.title
         infoLabel.text = guidePageConfig.info
     }
     
-    func configuringView(with guidePageConfig: WalkthroughGuideViewModel.GuidePageConfig) -> WalkthroughPageViewController {
-        self.guidePageConfig = guidePageConfig
-        return self
+    func configureView(with guidePage: WalkthroughGuideViewModel.GuidePage) {
+        self.guidePage = guidePage
     }
 }

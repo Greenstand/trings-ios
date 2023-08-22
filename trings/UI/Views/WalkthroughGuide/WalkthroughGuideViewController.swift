@@ -33,6 +33,11 @@ class WalkthroughGuideViewController: UIViewController {
     var viewModel: WalkthroughGuideViewModel?
     
     private var pendingIndex = 0
+    private let walkthroughPages: [WalkthroughPage] = [
+        StoryboardScene.WalkthroughPage.initialScene.instantiate(),
+        StoryboardScene.WalkthroughPage.initialScene.instantiate(),
+        StoryboardScene.WalkthroughPage.initialScene.instantiate()
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +47,7 @@ class WalkthroughGuideViewController: UIViewController {
     func setupView() {
         setupPageViewController()
         viewModel?.setupGuidePages()
-        guidePageControl.numberOfPages = viewModel?.getTotalNumberOfPages() ?? 0
+        guidePageControl.numberOfPages = walkthroughPages.count
     }
     
     func setupPageViewController() {
@@ -59,6 +64,10 @@ class WalkthroughGuideViewController: UIViewController {
             pageViewController.view.bottomAnchor.constraint(equalTo: pageContainerView.bottomAnchor)
         ])
     }
+    
+    func getPageIndex(of walkthroughPage: WalkthroughPage) -> Int? {
+        return walkthroughPages.firstIndex(where: { $0 == walkthroughPage })
+    }
 }
 
 // MARK: - Button Actions
@@ -72,8 +81,13 @@ extension WalkthroughGuideViewController {
 // MARK: - WalkthroughGuideViewModelDelegate
 extension WalkthroughGuideViewController: WalkthroughGuideViewModelDelegate {
 
-    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willAddFirstPage page: UIViewController) {
-        pageViewController.setViewControllers([page], direction: .forward, animated: true)
+    func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willSetupGuidePages guidePages: [WalkthroughGuideViewModel.GuidePage]) {
+        zip(walkthroughPages, guidePages).forEach { walkthroughPage, guidePage in
+            walkthroughPage.configureView(with: guidePage)
+        }
+        
+        guard let firstWalkthroughPage = walkthroughPages.first else { return }
+        pageViewController.setViewControllers([firstWalkthroughPage], direction: .forward, animated: true)
     }
 }
 
@@ -81,19 +95,31 @@ extension WalkthroughGuideViewController: WalkthroughGuideViewModelDelegate {
 extension WalkthroughGuideViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return viewModel?.getPage(before: viewController)
+        guard let walkthroughPage = viewController as? WalkthroughPage,
+              let index = getPageIndex(of: walkthroughPage)
+        else { return nil }
+        
+        let previousPage = index - 1
+        guard previousPage >= 0 else { return nil }
+        return walkthroughPages[previousPage]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return viewModel?.getPage(after: viewController)
+        guard let walkthroughPage = viewController as? WalkthroughPage,
+              let index = getPageIndex(of: walkthroughPage)
+        else { return nil }
+        
+        let nextPage = index + 1
+        guard nextPage < walkthroughPages.count else { return nil }
+        return walkthroughPages[nextPage]
     }
 }
 
 // MARK: - UIPageViewControllerDelegate
 extension WalkthroughGuideViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        guard let firstVC = pendingViewControllers.first,
-              let index = viewModel?.getIndex(of: firstVC)
+        guard let firstWalkthroughPage = pendingViewControllers.first as? WalkthroughPage,
+              let index = getPageIndex(of: firstWalkthroughPage)
         else { return }
         pendingIndex = index
     }
