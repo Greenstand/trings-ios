@@ -18,8 +18,8 @@ class WalkthroughGuideViewModel {
     private var guidePages: [GuidePage] {
         [
             GuidePage(title: L10n.Walkthrough.OnTheGround.title, info: L10n.Walkthrough.OnTheGround.info, icon: Asset.Assets.circleLeaf.image),
-            GuidePage(title: L10n.Walkthrough.OnTheGround.title, info: L10n.Walkthrough.OnTheGround.info, icon: Asset.Assets.circleLeaf.image),
-            GuidePage(title: L10n.Walkthrough.OnTheGround.title, info: L10n.Walkthrough.OnTheGround.info, icon: Asset.Assets.circleLeaf.image)
+            GuidePage(title: L10n.Walkthrough.InTheCloud.title, info: L10n.Walkthrough.InTheCloud.info, icon: Asset.Assets.circleBulb.image),
+            GuidePage(title: L10n.Walkthrough.InYourWallet.title, info: L10n.Walkthrough.InYourWallet.info, icon: Asset.Assets.circleCoin.image)
         ]
     }
     

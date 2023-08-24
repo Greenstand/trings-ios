@@ -33,11 +33,7 @@ class WalkthroughGuideViewController: UIViewController {
     var viewModel: WalkthroughGuideViewModel?
     
     private var pendingIndex = 0
-    private let walkthroughPages: [WalkthroughPage] = [
-        StoryboardScene.WalkthroughPage.initialScene.instantiate(),
-        StoryboardScene.WalkthroughPage.initialScene.instantiate(),
-        StoryboardScene.WalkthroughPage.initialScene.instantiate()
-    ]
+    private var walkthroughPages: [WalkthroughPage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,8 +78,10 @@ extension WalkthroughGuideViewController {
 extension WalkthroughGuideViewController: WalkthroughGuideViewModelDelegate {
 
     func walkthroughGuideViewController(_ walkthroughViewModel: WalkthroughGuideViewModel, willSetupGuidePages guidePages: [WalkthroughGuideViewModel.GuidePage]) {
-        zip(walkthroughPages, guidePages).forEach { walkthroughPage, guidePage in
-            walkthroughPage.configureView(with: guidePage)
+        guidePages.forEach { guidePage in
+            let newWalkthroughPage = StoryboardScene.WalkthroughPage.initialScene.instantiate()
+            newWalkthroughPage.configureView(with: guidePage)
+            walkthroughPages.append(newWalkthroughPage)
         }
         
         guard let firstWalkthroughPage = walkthroughPages.first else { return }
