@@ -50,6 +50,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<trings.WalkthroughGuideViewController>(storyboard: WalkthroughGuide.self)
   }
+  internal enum WalkthroughPage: StoryboardType {
+    internal static let storyboardName = "WalkthroughPage"
+
+    internal static let initialScene = InitialSceneType<trings.WalkthroughPageViewController>(storyboard: WalkthroughPage.self)
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length prefer_self_in_static_references
 // swiftlint:enable type_body_length type_name

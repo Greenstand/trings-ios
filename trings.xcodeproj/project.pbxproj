@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372773CC2A913A390079EF35 /* WalkthroughPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372773CB2A913A390079EF35 /* WalkthroughPage.storyboard */; };
+		372773CE2A913A4E0079EF35 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372773CD2A913A4E0079EF35 /* WalkthroughPageViewController.swift */; };
 		8A9630A4686F19A0986A4995 /* Pods_trings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F526139D1DDB8A51434A36B7 /* Pods_trings.framework */; };
 		938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */; };
 		938E0A2C290ACFC600429789 /* MyWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938E0A2B290ACFC600429789 /* MyWalletViewController.swift */; };
@@ -75,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		1E944E60A35B2C6911EDFC3E /* Pods-trings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.release.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.release.xcconfig"; sourceTree = "<group>"; };
+		372773CB2A913A390079EF35 /* WalkthroughPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkthroughPage.storyboard; sourceTree = "<group>"; };
+		372773CD2A913A4E0079EF35 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		8F7E623D148AA014682D1196 /* Pods-trings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trings.debug.xcconfig"; path = "Target Support Files/Pods-trings/Pods-trings.debug.xcconfig"; sourceTree = "<group>"; };
 		938E0A29290ACFBB00429789 /* MyWalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewModel.swift; sourceTree = "<group>"; };
 		938E0A2B290ACFC600429789 /* MyWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		372773CA2A9139AD0079EF35 /* WalkthroughPage */ = {
+			isa = PBXGroup;
+			children = (
+				372773CB2A913A390079EF35 /* WalkthroughPage.storyboard */,
+				372773CD2A913A4E0079EF35 /* WalkthroughPageViewController.swift */,
+			);
+			path = WalkthroughPage;
+			sourceTree = "<group>";
+		};
 		3A0B32D7B27CC8FC024F3C64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +237,7 @@
 		938E0A48290BB3FE00429789 /* WalkthroughGuide */ = {
 			isa = PBXGroup;
 			children = (
+				372773CA2A9139AD0079EF35 /* WalkthroughPage */,
 				938E0A4B290BC52800429789 /* WalkthroughGuideViewController.swift */,
 				938E0A4D290BC53700429789 /* WalkthroughGuide.storyboard */,
 				938E0A49290BC51B00429789 /* WalkthroughGuideViewModel.swift */,
@@ -562,6 +576,7 @@
 				93B6474D28D9F6810075DF16 /* Colors.xcassets in Resources */,
 				938E0A2E290ACFCF00429789 /* MyWallet.storyboard in Resources */,
 				93B6470028D9F3FF0075DF16 /* Assets.xcassets in Resources */,
+				372773CC2A913A390079EF35 /* WalkthroughPage.storyboard in Resources */,
 				93B646FE28D9F3FD0075DF16 /* SignIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +668,7 @@
 				93B6476528D9FBCC0075DF16 /* BaseNavigationViewController.swift in Sources */,
 				B07667F829253FAD00E24B0F /* TreeModel.swift in Sources */,
 				B0B79A6E291C0BAB00EC6267 /* TreeMapViewModel.swift in Sources */,
+				372773CE2A913A4E0079EF35 /* WalkthroughPageViewController.swift in Sources */,
 				938E0A2A290ACFBB00429789 /* MyWalletViewModel.swift in Sources */,
 				93B6475B28D9F7D50075DF16 /* RootCoordinator.swift in Sources */,
 				B0B79A60291AB5FA00EC6267 /* PreviewPurchaseViewController.swift in Sources */,
