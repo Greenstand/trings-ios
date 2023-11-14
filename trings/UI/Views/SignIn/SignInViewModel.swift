@@ -41,8 +41,8 @@ class SignInViewModel {
     func signInWallet() {
         GreenstandWalletSDK.shared.signInWallet(walletName: walletName, password: password) { result in
             switch result {
-            case .success(let name):
-                self.coordinatorDelegate?.signInViewModel(self, didSignInWallet: name)
+            case .success:
+                self.coordinatorDelegate?.signInViewModel(self, didSignInWallet: self.walletName)
             case .failure(let error):
                 self.viewDelegate?.signInViewModel(self, didReceiveError: error)
             }
