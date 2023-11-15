@@ -19,9 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration: .init(
                 walletAPIConfiguration: .init(
                     apiKey: "",
-                    rootURL: URL(string: "")!,
-                    rootWalletName: "",
-                    rootPassword: ""
+                    rootURL: URL(string: "")!
                 ),
                 authenticationServiceConfiguration: .init(
                     authorizationEndpoint: URL(string: "")!,
